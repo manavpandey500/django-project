@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+</head>
+<body>
+    <div class="container" style="text-align: center">
+        <h1>WELCOME</h1>
+        {% include 'navbar.html' %}
+        <h2>This website was made with the help of Django framework which uses Model View Template architecture. This website is taking data from view and filling it to template dynamically.</h2>
+        {% if isActive %}
+        <div>
+        <h3>Todays date is {{date}}</h3>
+        <h3>{{name}}</h3>
+        <hr>
+        <h1>Student data</h1>
+        <h2>Student Name : {{student_data.student_name}}</h2>
+        <h2>Student College : {{student_data.student_college}}</h2>
+        <h2>Student City : {{student_data.student_city}}</h2>
+        </div>
+        {%endif%}
+    </div>
+</body>
+</html>
